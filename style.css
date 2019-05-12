@@ -4,7 +4,7 @@
 /*-----------------------------*/
 
 .logo {
-    background: url("../media/images/cover2.png");
+    background: url("/media/images/cover2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
