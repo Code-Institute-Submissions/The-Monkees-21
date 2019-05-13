@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Merienda:100,200,300,400,500,600,700|Schoolbell:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Merienda:100,200,300,400,500,600,700|Schoolbell:100,200,300,400,500,600,700|Amatic SC:100,200,300,400,500,600,700');
 
 
-/*-----------------------------*/
+/*----------------------------- extent*/
 
 .logo {
-    background: url("/media/images/cover2.png");
+    background: url("media/images/cover2.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 50px;
     padding: 0;
-     transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
 }
@@ -19,8 +19,18 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
     margin: 0;
+    padding: 5px;
+    font-family: "Schoolbell", sans-serif;
+    font-weight: 200;
+}
+
+p {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
 }
 
 .uppercase {
@@ -28,12 +38,11 @@ h5 {
 }
 
 .list-inline-item:not(:last-child) {
-   margin: 0;
+    margin: 0;
 }
 
 
-
-/*-----------------------------*/
+/*-----------------------------header*/ 
 
 header {
     background-color: #b22222;
@@ -43,8 +52,21 @@ header {
     padding: 0;
 }
 
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
 .row {
     margin: 0;
+}
+
+.col {
+    padding: 0;
+}
+
+.history-item {
+    padding: 10px;
 }
 
 #nav {
@@ -59,6 +81,7 @@ header {
 .menuitem {
     text-align: center;
     margin: 0;
+    padding: 0;
 }
 
 .menuitem a {
@@ -74,19 +97,37 @@ header {
     padding-top: 10px;
     text-align: center;
     text-transform: uppercase;
-    font-size: 20px;
+    font-family: "Merienda", sans-serif;
+    font-weight: 100;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 
+.hvr-sweep-to-bottom:before {
+    background: rgba(0, 0, 0, 0.2);
+    height: 50px;
+}
 
-/*-----------------------------*/
+@media(max-width:500px) {
+    .logo {
+        min-height: 120px;
+    }
+}
+
+@media(max-width:500px) {
+    header {
+        min-height: 120px;
+    }
+}
+
+/*----------------------------- section*/
 
 section {
     background-color: #fffacd;
 }
 
 .contact {
-    height: 520px;
+    min-height: 520px;
 }
 
 .contact-style {
@@ -95,9 +136,11 @@ section {
 
 .center-form {
     padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-@media (min-width:992px){
+@media (min-width:992px) {
     .center-form {
         margin: 0 auto;
         max-width: 60%;
@@ -125,13 +168,44 @@ section {
     position: absolute;
     border-radius: 12px;
     content: "";
-    
+
 }
-/*-----------------------------*/
+
+.mv-section {
+    padding: 10px;
+}
+
+/*----------------------------- footer*/
 
 footer {
     background-color: #b22222;
     color: #fafafa;
     margin: 0;
     min-height: 100px;
+    font-family: "Merienda", sans-serif;
+}
+
+.footer-style {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.social-links li {
+    padding: 5px;
+}
+
+.social-links li a i {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 28px;
+    color: #fafafa;
+    background: #b22222;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: rgba(0, 0, 0, 0.5);
 }
